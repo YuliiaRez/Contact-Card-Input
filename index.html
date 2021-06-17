@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script defer src="./validation.js"></script>
+</head>
+
+<body>
+    <div id="card">
+        <div id="container">
+            <form action="#" method="post" id="contact_form">
+                <h1> Contact form </h1>
+                <p id='fillInfo'>Please fill in your information and we will be sending your order.</p>
+                <div id='inputFields'>
+                    <div id="sideBarFields">
+                        <label for="name">Your name</label><br />
+                        <label for="email">Your e-mail</label><br />
+                        <label for="telephone">Phone*</label><br />
+                        <label for="subject">Message subject*</label><br />
+                        <label for="message">Message*</label><br />
+                    </div>
+                    <div id='fields'>
+                        <div class="name" class="fieldsRow">
+                            <input type="text" name="first_name" value="First_name" pattern="^[\p{L}\p{M} \-\.',]*$">
+                            <input type="text" name="last_name" value="Last_name"
+                                pattern="^[\p{L}\p{M} \-\.',]*$" /><br />
+                        </div>
+                        <div class="email" class="fieldsRow">
+                            <input type="email" placeholder="Your e-mail" name="email" id="email_input"
+                                value="Your e-mail" pattern="([A-z0-9_.-]{1,})@([A-z0-9_.-]{1,}).([A-z]{2,8})">
+                        </div>
+                        <div class="telephone" class="fieldsRow">
+                            <input type="text" placeholder="Phone*" name="telephone" id="telephone_input" required
+                                pattern="/^(?:(?:\(?(?:00|\+)([1-4]\d\d|[1-9]\d?)\)?)?[\-\.\ \\\/]?)?((?:\(?\d{1,}\)?[\-\.\ \\\/]?){0,})(?:[\-\.\ \\\/]?(?:#|ext\.?|extension|x)[\-\.\ \\\/]?(\d+))?$/i"
+                                maxlength="13">
+                            <input type="text" name="telephone" id="telephone_input">
+                            <input type="text" name="telephone" id="telephone_input">
+                        </div>
+                        <div class="subject" class="fieldsRow">
+                            <select placeholder="Message subject*" name="subject" id="subject_input" required>
+                                <option disabled hidden selected>Other</option>
+                                <option>Start a project</option>
+                                <option>Ask a question</option>
+                                <option>Make a proposal</option>
+                            </select>
+                        </div>
+                        <div class="message" class="fieldsRow">
+                            <textarea name="message" placeholder="Message" id="message_input" cols="30" rows="5"
+                                required></textarea>
+                        </div>
+                        <div class="underline">
+                        </div>
+                        <div class="submit">
+                            <input type="submit" value="Submit Form" id="form_button" />
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
